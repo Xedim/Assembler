@@ -1,4 +1,5 @@
-; Ïðîãðàììà ñðàâíèâàþùàÿ 2 ëîãè÷åñêèõ âûðàæåíèÿ
+; Comparing 2 logical expressions
+
 .386
 .model flat,stdcall
 .stack 4096
