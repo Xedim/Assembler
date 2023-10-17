@@ -1,4 +1,4 @@
-; Sum of array elements divisible by 3 or 5
+; Sum of array elements divisible by 3 and 5
 
 .386
 .model flat, stdcall
@@ -23,17 +23,14 @@ Sum_of_divisible:
 	mov eax, [edi]
 	div three
 	cmp edx, 0
-	jne Not_divisisble_by_3
-	add ebx, [edi]
-	jmp Not_divisisble_by_5
-	Not_divisisble_by_3:
+	jne Not_divisisble
 	mov edx, 0
 	mov eax, [edi]
 	div five
 	cmp edx, 0
-	jne Not_divisisble_by_5
+	jne Not_divisisble
 	add ebx, [edi]	
-	Not_divisisble_by_5:
+	Not_divisisble:
 	add edi, TYPE array
 	loop Sum_of_divisible
 
